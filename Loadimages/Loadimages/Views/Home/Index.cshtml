@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<script src="~/Scripts/jquery-1.7.1.js"></script>
+<script>
+    $(document).ready(function () {
+        $.ajax({
+            type: "GET",
+            url: '/home/getImage',
+            success: function (data) {
+                $("#imageplaceholder").empty().append(data);
+            }
+        });
+    });
+</script>
+<h2>Index</h2>
+<div id="imageplaceholder">
+
+</div>
